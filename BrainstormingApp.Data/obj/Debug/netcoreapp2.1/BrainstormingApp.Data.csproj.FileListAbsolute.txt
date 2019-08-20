@@ -1,0 +1,14 @@
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\bin\Debug\netcoreapp2.1\BrainstormingApp.Data.deps.json
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\bin\Debug\netcoreapp2.1\BrainstormingApp.Data.dll
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\obj\Debug\netcoreapp2.1\BrainstormingApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\obj\Debug\netcoreapp2.1\BrainstormingApp.Data.AssemblyInfoInputs.cache
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\obj\Debug\netcoreapp2.1\BrainstormingApp.Data.AssemblyInfo.cs
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\obj\Debug\netcoreapp2.1\BrainstormingApp.Data.csprojAssemblyReference.cache
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\bin\Debug\netcoreapp2.1\BrainstormingApp.Data.runtimeconfig.json
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\bin\Debug\netcoreapp2.1\BrainstormingApp.Data.runtimeconfig.dev.json
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\bin\Debug\netcoreapp2.1\BrainstormingApp.Data.pdb
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\bin\Debug\netcoreapp2.1\BrainstormingApp.Domain.dll
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\bin\Debug\netcoreapp2.1\BrainstormingApp.Domain.pdb
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\obj\Debug\netcoreapp2.1\BrainstormingApp.Data.csproj.CopyComplete
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\obj\Debug\netcoreapp2.1\BrainstormingApp.Data.dll
+C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingApp.Data\obj\Debug\netcoreapp2.1\BrainstormingApp.Data.pdb
