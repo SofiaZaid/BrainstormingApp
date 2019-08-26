@@ -1,9 +1,0 @@
-C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingRoom\bin\Debug\netcoreapp2.1\BrainstormingApp.Domain.deps.json
-C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingRoom\bin\Debug\netcoreapp2.1\BrainstormingApp.Domain.dll
-C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingRoom\bin\Debug\netcoreapp2.1\BrainstormingApp.Domain.pdb
-C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingRoom\obj\Debug\netcoreapp2.1\BrainstormingApp.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingRoom\obj\Debug\netcoreapp2.1\BrainstormingApp.Domain.AssemblyInfoInputs.cache
-C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingRoom\obj\Debug\netcoreapp2.1\BrainstormingApp.Domain.AssemblyInfo.cs
-C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingRoom\obj\Debug\netcoreapp2.1\BrainstormingApp.Domain.dll
-C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingRoom\obj\Debug\netcoreapp2.1\BrainstormingApp.Domain.pdb
-C:\Users\Sofia\source\repos\AzureBrainstormingApp\BrainstormingRoom\obj\Debug\netcoreapp2.1\BrainstormingApp.Domain.csprojAssemblyReference.cache
