@@ -12,10 +12,6 @@ using System.Threading.Tasks;
 [assembly: FunctionsStartup(typeof(Startup.Startup))]
 namespace Startup
 {
-    /// <summary>
-    /// peta in rum i databasen och ge tillbaka id på rummet.
-    /// 
-    /// </summary>
     public class NewRoomGet
     {
         private readonly BrainstormingAppContext _context;
@@ -37,7 +33,7 @@ namespace Startup
             var room = new BrainstormingRoom { Id = Guid.NewGuid(), Name = name };
             await _context.AddAsync(room);
 
-           await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
             return new OkObjectResult(room.Id);
         }

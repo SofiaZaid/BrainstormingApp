@@ -9,7 +9,7 @@ namespace BrainstormingApp.Domain
         public string UserNick { get; set; }
 
         public string MessageText { get; set; }
-        
+
         public DateTime MessageCreated { get; set; }
     }
 }

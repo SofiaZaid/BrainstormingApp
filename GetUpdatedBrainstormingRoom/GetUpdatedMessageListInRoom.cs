@@ -30,7 +30,7 @@ namespace GetUpdatedMessageListInRoom
 
             var guid = new Guid(id);
             var room = await _context.Rooms.SingleOrDefaultAsync(m => m.Id == guid);
-            if(null == room)
+            if (null == room)
             {
                 return new NotFoundObjectResult("Room id not found.");
             }

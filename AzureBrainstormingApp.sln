@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrainstormingAppAddNewMessa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionsStartup", "FunctionsStartup\FunctionsStartup.csproj", "{6F0CDEEF-D953-4E59-92A2-32B2E134DB7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetUpdatedBrainstormingRoom", "GetUpdatedBrainstormingRoom\GetUpdatedBrainstormingRoom.csproj", "{19C1E830-759F-4B8E-8BCA-E87C6EF33594}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetUpdatedMessageListInRoom", "GetUpdatedBrainstormingRoom\GetUpdatedMessageListInRoom.csproj", "{19C1E830-759F-4B8E-8BCA-E87C6EF33594}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -20,7 +20,7 @@ namespace AzureMindMapGet
             log.LogInformation("C# HTTP trigger function processed a request.");
 
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
-            using(StreamReader reader = new StreamReader(testBrainstormingHome))
+            using (StreamReader reader = new StreamReader(testBrainstormingHome))
             {
                 response.Content = new StringContent(await reader.ReadToEndAsync());
             }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BrainstormingApp.Data
 {
-    public class BrainstormingAppContext : DbContext 
+    public class BrainstormingAppContext : DbContext
     {
         public DbSet<Message> Messages { get; set; }
 
