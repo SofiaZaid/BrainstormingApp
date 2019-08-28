@@ -22,7 +22,7 @@ namespace GetUpdatedMessageListInRoom
 
         [FunctionName("GetUpdatedMessageListInRoom")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, DateTime startTime,
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "newmessages/{id}/{startTime}")] HttpRequest req, string startTime,
             string id,
             ILogger log)
         {
@@ -37,7 +37,7 @@ namespace GetUpdatedMessageListInRoom
 
             var messages = await _context.Rooms
                 .Where(r => r.Id.Equals(guid))
-                .SelectMany(r => r.Messages.Where(msg => msg.MessageCreated >= startTime))
+                .SelectMany(r => r.Messages.Where(msg => msg.MessageCreated >= DateTime.Parse(startTime)))
                 .ToListAsync();
 
             return new OkObjectResult(messages);

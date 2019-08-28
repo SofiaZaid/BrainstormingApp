@@ -13,14 +13,14 @@ namespace AzureMindMapGet
     {
         [FunctionName("HomePage")]
         public static async Task<HttpResponseMessage> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "")] HttpRequest req,
             [Blob("website/testBrainstormingHome", FileAccess.Read)] Stream testBrainstormingHome,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
             HttpResponseMessage response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
-            using (StreamReader reader = new StreamReader(testBrainstormingHome))
+            using(StreamReader reader = new StreamReader(testBrainstormingHome))
             {
                 response.Content = new StringContent(await reader.ReadToEndAsync());
             }

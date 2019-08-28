@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionsStartup", "Functio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetUpdatedMessageListInRoom", "GetUpdatedBrainstormingRoom\GetUpdatedMessageListInRoom.csproj", "{19C1E830-759F-4B8E-8BCA-E87C6EF33594}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainstormingAppHomepage", "BrainstormingAppHomepage\BrainstormingAppHomepage.csproj", "{F83FA5F9-68EE-42BB-8897-2BC67074AE76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83FA5F9-68EE-42BB-8897-2BC67074AE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83FA5F9-68EE-42BB-8897-2BC67074AE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83FA5F9-68EE-42BB-8897-2BC67074AE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83FA5F9-68EE-42BB-8897-2BC67074AE76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
