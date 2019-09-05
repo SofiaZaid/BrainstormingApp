@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29123.88
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureBrainStormingGetNewBrainstormingRoom", "AzureBrainStormingGetNewBrainstormingRoom\AzureBrainStormingGetNewBrainstormingRoom.csproj", "{0D21E81A-9AC0-4A21-831F-E7C95B2C01A7}"
 EndProject
@@ -14,8 +14,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionsStartup", "FunctionsStartup\FunctionsStartup.csproj", "{6F0CDEEF-D953-4E59-92A2-32B2E134DB7B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetUpdatedMessageListInRoom", "GetUpdatedBrainstormingRoom\GetUpdatedMessageListInRoom.csproj", "{19C1E830-759F-4B8E-8BCA-E87C6EF33594}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainstormingAppHomepage", "BrainstormingAppHomepage\BrainstormingAppHomepage.csproj", "{F83FA5F9-68EE-42BB-8897-2BC67074AE76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F83FA5F9-68EE-42BB-8897-2BC67074AE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F83FA5F9-68EE-42BB-8897-2BC67074AE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F83FA5F9-68EE-42BB-8897-2BC67074AE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F83FA5F9-68EE-42BB-8897-2BC67074AE76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
