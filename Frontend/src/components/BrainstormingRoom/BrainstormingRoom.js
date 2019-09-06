@@ -7,25 +7,17 @@ class BrainstormingRoom extends Component {
       <div id="wrap">
         <span id="headlineRoom">Your room</span>
             <ul id="addedIdeasList">
-              <li>hej</li>
-              <li>hej</li>
-              <li>hej</li>
-              <li>hej</li>
-              <li>hej</li>
-              <li>hej</li>
-              <li>hej</li><li>hej</li>
-              <li>hej</li>
-              <li>hej</li><li>hej</li>
-              <li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li>
-              <li>hej</li><li>hej</li><li>hej</li><li>hej</li>
-              <li>hej</li><li>hej</li><li>hej</li><li>hej</li>
-              <li>hej</li><li>hej</li><li>hej</li><li>hej</li>
             </ul>
+            <textarea id="writeIdeaArea" placeholder="Write your idea here"></textarea>
         <button id= "addMessageButton">Click to add your note to the brainstorming list</button>
         {/* <div>{props.match.params.roomid}</div> */}
       </div>
     );
+  };
+
+  addListItem () {
+    
   }
-}
+};
 
 export default BrainstormingRoom;
