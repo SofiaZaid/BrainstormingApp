@@ -1,13 +1,14 @@
 #wrap {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 2fr 5fr 2fr; 
+    grid-template-rows: 2fr 5fr 1fr 1fr; 
     height: 100%;
     width: 100%;
     position: absolute;
 }
+
 #addMessageButton {
-    grid-row: 4 /span 1;
+    grid-row: 3 /span 1;
     grid-column: 2 /span 1;
     padding: 1em;
     margin: 1em;
@@ -23,4 +24,11 @@
     font-size: 8em;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+ul {
+    display: block;
+    grid-column: 2 /span 1;
+    list-style-type: circle;
+    overflow: auto;
 }

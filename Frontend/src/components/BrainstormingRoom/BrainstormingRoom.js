@@ -1,14 +1,31 @@
-import React from "react";
+import React, { Component } from 'react';
 import './BrainstormingRoom.css';
 
-const brainstormingRoom = props => {
+class BrainstormingRoom extends Component {
+  render() {
     return (
       <div id="wrap">
         <span id="headlineRoom">Your room</span>
-          <button id= "addMessageButton">Click to add your note to the brainstorming list</button>
-          {/* <div>{props.match.params.roomid}</div> */}
-          </div>
+            <ul id="addedIdeasList">
+              <li>hej</li>
+              <li>hej</li>
+              <li>hej</li>
+              <li>hej</li>
+              <li>hej</li>
+              <li>hej</li>
+              <li>hej</li><li>hej</li>
+              <li>hej</li>
+              <li>hej</li><li>hej</li>
+              <li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li><li>hej</li>
+              <li>hej</li><li>hej</li><li>hej</li><li>hej</li>
+              <li>hej</li><li>hej</li><li>hej</li><li>hej</li>
+              <li>hej</li><li>hej</li><li>hej</li><li>hej</li>
+            </ul>
+        <button id= "addMessageButton">Click to add your note to the brainstorming list</button>
+        {/* <div>{props.match.params.roomid}</div> */}
+      </div>
     );
-  };
-  export default brainstormingRoom;
-  
+  }
+}
+
+export default BrainstormingRoom;
