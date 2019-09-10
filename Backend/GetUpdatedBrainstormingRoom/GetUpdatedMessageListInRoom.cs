@@ -1,6 +1,7 @@
 using BrainstormingApp.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.EntityFrameworkCore;
@@ -9,8 +10,10 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
+[assembly: FunctionsStartup(typeof(Startup.Startup))]
 namespace GetUpdatedMessageListInRoom
 {
+
     public class GetUpdatedMessageListInRoom
     {
         private readonly BrainstormingAppContext _context;

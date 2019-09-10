@@ -8,6 +8,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BrainstormingApp.Data\BrainstormingApp.Data.csproj" />
+    <ProjectReference Include="..\FunctionsStartup\FunctionsStartup.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
