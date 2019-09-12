@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import './App.css';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import Homepage from '../components/Homepage/Homepage';
-import BrainstormingRoom from '../components/BrainstormingRoom/BrainstormingRoom';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
- 
+import React, { Component } from "react";
+import "./App.css";
+import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+import Homepage from "../components/Homepage/Homepage";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import NickNameSet from "../components/NickNameSet";
+
 class App extends Component {
   render() {
     return (
@@ -12,12 +12,12 @@ class App extends Component {
         <div>
           <Switch>
             <Route path="/" exact component={Homepage} />
-            <Route path = "/room/:roomid" component={BrainstormingRoom}/>
+            <Route path="/room/:roomid" component={NickNameSet} />
           </Switch>
         </div>
       </BrowserRouter>
     );
   }
 }
- 
+
 export default App;
