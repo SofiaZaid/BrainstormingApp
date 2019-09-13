@@ -9,15 +9,21 @@ class NickNameSet extends Component {
       nickName: "",
       nicknameIsSet: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.setNickName = this.setNickName.bind(this);
+    this.keyPress = this.keyPress.bind(this);
   }
 
-  handleClick() {
-    if (this.nickNameTextInput !== null) {
-      this.setState({
-        nickName: this.nickNameTextInput.value,
-        nickNameIsSet: true
-      });
+  setNickName(inputNick) {
+    this.setState({
+      nickName: inputNick,
+      nickNameIsSet: true
+    });
+  }
+
+  keyPress(e) {
+    if (e.keyCode === 13) {
+      console.log("value", e.target.value);
+      this.setNickName(this.refs.nickNameField.value);
     }
   }
 
@@ -39,14 +45,15 @@ class NickNameSet extends Component {
           <input
             type="text"
             placeholder="Enter your nickname"
-            ref={ref => (this.nickNameTextInput = ref)}
             id="nickNameField"
+            ref="nickNameField"
+            onKeyUp={this.keyPress}
           />
           <br />
           <button
             type="button"
             id="addNickNameButton"
-            onClick={this.handleClick}
+            onClick={() => this.setNickName(this.refs.nickNameField.value)}
           >
             Add
           </button>

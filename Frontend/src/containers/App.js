@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 import Homepage from "../components/Homepage/Homepage";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NickNameSet from "../components/NickNameSet/NickNameSet.js";
 
 class App extends Component {
