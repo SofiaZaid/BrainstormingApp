@@ -13,19 +13,18 @@ using System.Linq;
 using System.Threading.Tasks;
 
 [assembly: FunctionsStartup(typeof(Startup.Startup))]
-namespace BrainstormingAppAddNewMessage
+namespace AzureBrainStormingGetNewBrainstormingRoom
 {
-
-    public class BrainstormingAppAddNewMessage
+    public class AddNewMessage
     {
         private readonly BrainstormingAppContext _context;
 
-        public BrainstormingAppAddNewMessage(BrainstormingAppContext context)
+        public AddNewMessage(BrainstormingAppContext context)
         {
             _context = context;
         }
 
-        [FunctionName("BrainstormingAppAddNewMessage")]
+        [FunctionName("AddNewMessage")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = "rooms/{id}")] HttpRequest req, string id,
             ILogger log)

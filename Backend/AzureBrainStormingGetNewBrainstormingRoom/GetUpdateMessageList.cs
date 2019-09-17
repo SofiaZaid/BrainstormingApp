@@ -11,19 +11,18 @@ using System.Linq;
 using System.Threading.Tasks;
 
 [assembly: FunctionsStartup(typeof(Startup.Startup))]
-namespace GetUpdatedMessageListInRoom
+namespace AzureBrainStormingGetNewBrainstormingRoom
 {
-
-    public class GetUpdatedMessageListInRoom
+    public class GetUpdateMessageList
     {
         private readonly BrainstormingAppContext _context;
 
-        public GetUpdatedMessageListInRoom(BrainstormingAppContext context)
+        public GetUpdateMessageList(BrainstormingAppContext context)
         {
             _context = context;
         }
 
-        [FunctionName("GetUpdatedMessageListInRoom")]
+        [FunctionName("GetUpdateMessageList")]
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "newmessages/{id}/{startTime}")] HttpRequest req, string startTime,
             string id,
