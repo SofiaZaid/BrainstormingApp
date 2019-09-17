@@ -32,7 +32,7 @@ class NickNameSet extends Component {
       return (
         <BrainstormingRoomPage
           roomid={this.props.match.params.roomid}
-          nickname={this.state.nickname}
+          nickname={this.state.nickName}
         ></BrainstormingRoomPage>
       );
     } else

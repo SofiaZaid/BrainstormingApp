@@ -6,10 +6,19 @@ class BrainstormingRoom extends Component {
   constructor(props) {
     super(props);
     this.state = { items: [] };
+
+    this.keyPress = this.keyPress.bind(this);
   }
 
   componentDidMount() {
     this.getUpdateList(new Date("1900-01-01 00:00:00"));
+  }
+
+  keyPress(e) {
+    if (e.keyCode === 13) {
+      console.log("value", e.target.value);
+      this.addListItem(this.refs.writeIdeaArea.value);
+    }
   }
 
   render() {
@@ -25,6 +34,8 @@ class BrainstormingRoom extends Component {
           type="text"
           id="writeIdeaArea"
           placeholder="Write your idea here"
+          ref="writeIdeaArea"
+          onKeyUp={this.keyPress}
         ></input>
         <button id="addMessageButton" onClick={this.addListItem.bind(this)}>
           Click to add your note to the brainstorming list
@@ -36,14 +47,14 @@ class BrainstormingRoom extends Component {
   addListItem() {
     let ideaArea = document.getElementById("writeIdeaArea");
     let idea = ideaArea.value;
-    fetch("http://localhost:7071/api/rooms/" + this.props.match.params.roomid, {
+    fetch("http://localhost:7071/api/rooms/" + this.props.roomid, {
       method: "POST",
       body: JSON.stringify({
         MessageText: idea,
-        UserNick: "anonymous"
+        UserNick: this.props.nickname
       })
     });
-
+    alert(this.props.nickname);
     ideaArea.focus();
     ideaArea.value = "";
   }
