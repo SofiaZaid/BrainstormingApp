@@ -30,14 +30,17 @@ class BrainstormingRoom extends Component {
             <li key={item.id.toString()}>{item.messageText}</li>
           ))}
         </ul>
-        <input
-          type="text"
+        <textarea
           id="writeIdeaArea"
           placeholder="Write your idea here"
           ref="writeIdeaArea"
           onKeyUp={this.keyPress}
-        ></input>
-        <button id="addMessageButton" onClick={this.addListItem.bind(this)}>
+        ></textarea>
+        <button
+          class="buttonBeforeHover"
+          id="addMessageButton"
+          onClick={this.addListItem.bind(this)}
+        >
           Click to add your note to the brainstorming list
         </button>
       </div>
