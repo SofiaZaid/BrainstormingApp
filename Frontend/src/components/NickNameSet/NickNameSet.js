@@ -51,6 +51,7 @@ class NickNameSet extends Component {
           />
           <br />
           <button
+            class="buttonBeforeHover"
             type="button"
             id="addNickNameButton"
             onClick={() => this.setNickName(this.refs.nickNameField.value)}

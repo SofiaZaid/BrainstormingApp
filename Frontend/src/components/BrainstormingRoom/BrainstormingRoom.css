@@ -12,6 +12,7 @@
   width: 100%;
   position: absolute;
   font-family: "Josefin Sans", sans-serif;
+  background-color: #f6b352;
 }
 
 #addMessageButton {
@@ -19,7 +20,7 @@
   grid-column: 2 / span 1;
   padding: 1em;
   margin: 1em;
-  background-color: pink;
+  background-color: #f68657;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }

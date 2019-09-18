@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f6b352;
+}
+
 .wrapper {
   grid-template-rows: 1fr 2fr;
   grid-template-columns: 1fr;
@@ -17,14 +21,11 @@
 }
 
 #newRoomButton {
-  background-color: pink;
   font-weight: bold;
-  height: 5em;
-  width: 8em;
   margin-right: 1em;
   margin-top: 1em;
   grid-area: 2 / 2 / 2 / 2;
-  font-size: 0.8em;
+  font-size: 0.5;
   align-self: flex-start;
 }
 
@@ -35,6 +36,7 @@
   padding-left: 1em;
   padding-right: 1em;
   font-weight: bolder;
+  color: #1f2124;
 }
 
 #introText {
@@ -44,6 +46,7 @@
   font-size: 1.2em;
   font-weight: bolder;
   justify-self: center;
+  color: #1f2124;
 }
 
 @media (min-width: 390px) {

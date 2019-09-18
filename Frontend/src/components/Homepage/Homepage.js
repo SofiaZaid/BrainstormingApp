@@ -1,4 +1,5 @@
 import React from "react";
+import "../Button/Button.css";
 import "./Homepage.css";
 import { baseURL as URL } from "../../Settings/Constants";
 
@@ -14,7 +15,7 @@ const homepage = props => {
   return (
     <div className="wrapper">
       <h1 id="headlineHomepage">The brainstorming app</h1>
-      <button id="newRoomButton" onClick={getNewRoom}>
+      <button class="buttonBeforeHover" id="newRoomButton" onClick={getNewRoom}>
         Click for new brainstorming room
       </button>
       <span id="introText">
