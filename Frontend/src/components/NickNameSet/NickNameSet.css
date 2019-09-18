@@ -17,8 +17,8 @@
 #nickNameHeader {
   grid-row: 2 / 3;
   grid-column: 2 / 5;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 3em;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2em;
   text-align: start;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
@@ -30,6 +30,7 @@
   height: 3.5em;
   justify-self: stretch;
   align-self: end;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #addNickNameButton {
@@ -59,4 +60,15 @@
   color: #006398;
   border: 0.063em solid #006398;
   box-shadow: 0.125em 0.125em 1.25em #afe9ff;
+}
+
+@media (min-width: 740px) {
+  #nickNameHeader {
+    font-size: 4em;
+  }
+  #nickNamePromptWrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3fr 2fr 1fr 1fr 1fr;
+    grid-row-gap: 0.5em;
+  }
 }
