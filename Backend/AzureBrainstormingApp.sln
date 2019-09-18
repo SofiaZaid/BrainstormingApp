@@ -9,11 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrainstormingApp.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrainstormingApp.Data", "BrainstormingApp.Data\BrainstormingApp.Data.csproj", "{2BBDD660-A8FA-463A-97F9-64E5CD39B086}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrainstormingAppAddNewMessage", "BrainstormingAppAddNewMessage\BrainstormingAppAddNewMessage.csproj", "{4ED6B3A0-67FA-4696-A237-AB232AA0803D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionsStartup", "FunctionsStartup\FunctionsStartup.csproj", "{6F0CDEEF-D953-4E59-92A2-32B2E134DB7B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetUpdatedMessageListInRoom", "GetUpdatedBrainstormingRoom\GetUpdatedMessageListInRoom.csproj", "{19C1E830-759F-4B8E-8BCA-E87C6EF33594}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,18 +29,10 @@ Global
 		{2BBDD660-A8FA-463A-97F9-64E5CD39B086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BBDD660-A8FA-463A-97F9-64E5CD39B086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BBDD660-A8FA-463A-97F9-64E5CD39B086}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4ED6B3A0-67FA-4696-A237-AB232AA0803D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4ED6B3A0-67FA-4696-A237-AB232AA0803D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4ED6B3A0-67FA-4696-A237-AB232AA0803D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4ED6B3A0-67FA-4696-A237-AB232AA0803D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F0CDEEF-D953-4E59-92A2-32B2E134DB7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F0CDEEF-D953-4E59-92A2-32B2E134DB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F0CDEEF-D953-4E59-92A2-32B2E134DB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F0CDEEF-D953-4E59-92A2-32B2E134DB7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19C1E830-759F-4B8E-8BCA-E87C6EF33594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
