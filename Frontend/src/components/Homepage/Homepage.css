@@ -9,9 +9,9 @@ body {
 }
 
 .wrapper {
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 0.5fr 2fr;
   grid-template-columns: 1fr;
-  grid-gap: 0em;
+  grid-gap: 0.5em;
   display: grid;
   height: 100%;
   width: 100%;
@@ -22,11 +22,14 @@ body {
 
 #newRoomButton {
   font-weight: bold;
-  margin-right: 1em;
-  margin-top: 1em;
-  grid-area: 2 / 2 / 2 / 2;
-  font-size: 0.5;
+  grid-area: 3 / 1 / 4 / 2;
+  font-size: 1em;
+  width: 10em;
+  padding: 2em;
+  /* width: 10em;
+  height: 10em; */
   align-self: flex-start;
+  justify-self: center;
 }
 
 #headlineHomepage {
@@ -49,7 +52,7 @@ body {
   color: #1f2124;
 }
 
-@media (min-width: 390px) {
+@media (min-width: 375px) {
   #headlineHomepage {
     font-size: 3em;
   }
@@ -57,18 +60,19 @@ body {
 
 @media (min-width: 780px) {
   .wrapper {
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 3fr 1fr;
   }
 
   #headlineHomepage {
+    padding-left: 0.3em;
     grid-row: 1 / span 1;
     grid-column: 1 / span 3;
     font-size: 8em;
   }
 
   #newRoomButton {
-    grid-area: 2 / 2 / 2 / 3;
+    grid-area: 3 / 1 / 4 / 2;
     font-size: 2em;
     align-items: center;
   }

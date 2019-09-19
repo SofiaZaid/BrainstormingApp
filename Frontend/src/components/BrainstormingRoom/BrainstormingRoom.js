@@ -5,7 +5,7 @@ import { updateMessageListMilliSeconds as milliSeconds } from "../../Settings/Co
 class BrainstormingRoom extends Component {
   constructor(props) {
     super(props);
-    this.state = { items: [] };
+    this.state = { items: [], messageIds: [] };
 
     this.keyPress = this.keyPress.bind(this);
   }
@@ -37,11 +37,11 @@ class BrainstormingRoom extends Component {
           onKeyUp={this.keyPress}
         ></textarea>
         <button
-          class="buttonBeforeHover"
+          className="buttonBeforeHover"
           id="addMessageButton"
           onClick={this.addListItem.bind(this)}
         >
-          Click to add your note to the brainstorming list
+          Add note
         </button>
       </div>
     );
@@ -56,8 +56,12 @@ class BrainstormingRoom extends Component {
         MessageText: idea,
         UserNick: this.props.nickname
       })
-    });
-    alert(this.props.nickname);
+    })
+      .then(messageId => messageId.json())
+      .then(messageId =>
+        this.setState({ messageIds: this.state.messageIds.concat(messageId) })
+      );
+    alert(this.state.messageIds);
     ideaArea.focus();
     ideaArea.value = "";
   }

@@ -16,7 +16,7 @@ const homepage = props => {
     <div className="wrapper">
       <h1 id="headlineHomepage">The brainstorming app</h1>
       <button class="buttonBeforeHover" id="newRoomButton" onClick={getNewRoom}>
-        Click for new brainstorming room
+        New room
       </button>
       <span id="introText">
         Welcome to the brainstorming app. Here you can easily create a room
