@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 [assembly: FunctionsStartup(typeof(Startup.Startup))]
 namespace Startup
 {
-    public class NewRoomGet
+    public class GetNewRoom
     {
         private readonly BrainstormingAppContext _context;
 
-        public NewRoomGet(BrainstormingAppContext context)
+        public GetNewRoom(BrainstormingAppContext context)
         {
             _context = context;
         }
@@ -26,15 +26,12 @@ namespace Startup
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
-
             string name = req.Query["name"];
 
             var room = new BrainstormingRoom { Id = Guid.NewGuid(), Name = name };
+
             await _context.AddAsync(room);
-
             await _context.SaveChangesAsync();
-
             return new OkObjectResult(room.Id);
         }
     }
