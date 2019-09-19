@@ -27,9 +27,9 @@ class BrainstormingRoom extends Component {
         <span id="headlineRoom">Your room</span>
         <ul id="addedIdeasList">
           {this.state.items.map(item => (
-            <li key={item.id.toString()}>
+            <li key={item.id}>
               {" "}
-              {this.addRemoveButton(item.id.toString())} {item.messageText}
+              {this.addRemoveButton(item.id)} {item.messageText}
             </li>
           ))}
         </ul>
