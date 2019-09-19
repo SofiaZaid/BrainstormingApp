@@ -27,7 +27,10 @@ class BrainstormingRoom extends Component {
         <span id="headlineRoom">Your room</span>
         <ul id="addedIdeasList">
           {this.state.items.map(item => (
-            <li key={item.id.toString()}>{item.messageText}</li>
+            <li key={item.id.toString()}>
+              {" "}
+              {this.addRemoveButton(item.id.toString())} {item.messageText}
+            </li>
           ))}
         </ul>
         <textarea
@@ -45,6 +48,22 @@ class BrainstormingRoom extends Component {
         </button>
       </div>
     );
+  }
+
+  isMyMessage(messageId) {
+    return this.state.messageIds.includes(messageId);
+  }
+
+  renderRemoveButton() {
+    return <button>Remove</button>;
+  }
+
+  addRemoveButton(messageId) {
+    console.log("nu är jag i addremovebutton");
+    if (this.isMyMessage(messageId)) {
+      console.log("jag ska skriva en knapp");
+      return this.renderRemoveButton();
+    }
   }
 
   addListItem() {
