@@ -11,5 +11,7 @@ namespace BrainstormingApp.Domain
         public string MessageText { get; set; }
 
         public DateTime MessageCreated { get; set; }
+
+        public DateTime MessageArchived { get; set; }
     }
 }
