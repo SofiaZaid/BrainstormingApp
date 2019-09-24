@@ -21,7 +21,7 @@ namespace BrainstormingApp.Data
             modelBuilder
                 .Entity<Message>()
                 .Property(m => m.MessageCreated)
-                .HasDefaultValueSql("getdate()");
+                .HasDefaultValueSql("getutcdate()");
         }
     }
 }

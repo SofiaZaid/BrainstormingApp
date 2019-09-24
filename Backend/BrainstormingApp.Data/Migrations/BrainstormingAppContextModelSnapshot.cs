@@ -42,7 +42,7 @@ namespace BrainstormingApp.Data.Migrations
 
                     b.Property<DateTime>("MessageCreated")
                         .ValueGeneratedOnAdd()
-                        .HasDefaultValueSql("getdate()");
+                        .HasDefaultValueSql("getutcdate()");
 
                     b.Property<string>("MessageText");
 
