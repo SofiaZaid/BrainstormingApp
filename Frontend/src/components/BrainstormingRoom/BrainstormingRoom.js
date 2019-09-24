@@ -27,9 +27,9 @@ class BrainstormingRoom extends Component {
         <span id="headlineRoom">Your room</span>
         <ul id="addedIdeasList">
           {this.state.items.map(item => (
-            <li key={item.id}>
+            <li id="brainstormingItem" key={item.id}>
               {" "}
-              {this.addRemoveButton(item.id)} {item.messageText}
+              {item.messageText} {this.addRemoveButton(item.id)}
             </li>
           ))}
         </ul>
@@ -55,13 +55,11 @@ class BrainstormingRoom extends Component {
   }
 
   renderRemoveButton() {
-    return <button>Remove</button>;
+    return <button id="removeItemButton">Remove</button>;
   }
 
   addRemoveButton(messageId) {
-    console.log("nu är jag i addremovebutton");
     if (this.isMyMessage(messageId)) {
-      console.log("jag ska skriva en knapp");
       return this.renderRemoveButton();
     }
   }
@@ -102,17 +100,17 @@ class BrainstormingRoom extends Component {
 
   formatTime(dateToFormat) {
     let date =
-      dateToFormat.getFullYear() +
+      dateToFormat.getUTCFullYear() +
       "-" +
-      (dateToFormat.getMonth() + 1) +
+      (dateToFormat.getUTCMonth() + 1) +
       "-" +
-      dateToFormat.getDate();
+      dateToFormat.getUTCDate();
     let time =
-      dateToFormat.getHours() +
+      dateToFormat.getUTCHours() +
       ":" +
-      dateToFormat.getMinutes() +
+      dateToFormat.getUTCMinutes() +
       ":" +
-      dateToFormat.getSeconds();
+      dateToFormat.getUTCSeconds();
     return date + " " + time;
   }
 }

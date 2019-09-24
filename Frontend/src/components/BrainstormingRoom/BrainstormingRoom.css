@@ -6,8 +6,9 @@
 
 #wrap {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 2fr 5fr 1fr 1fr;
+  margin-left: 1em;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -28,20 +29,22 @@
   grid-row: 1 / span 1;
   grid-column: 1 / span 3;
   text-align: center;
-  font-size: 8em;
+  font-size: 4em;
   padding-left: 1em;
   padding-right: 1em;
 }
 
-ul {
+#addedIdeasList {
   display: block;
-  grid-column: 2 / span 1;
-  list-style-type: disc;
-  overflow: auto;
+  grid-column: 2 / span 2;
 }
 
-li {
+#brainstormingItem {
   font-size: 3em;
+}
+
+#removeItemButton {
+  justify-items: end;
 }
 
 #writeIdeaArea {
@@ -51,4 +54,16 @@ li {
   font-size: 2em;
   overflow: auto;
   resize: none;
+}
+
+@media (min-width: 740px) {
+  #wrap {
+    grid-template-rows: 3fr 2fr 1fr;
+    grid-row-gap: 0.5em;
+  }
+
+  #headlineRoom {
+    font-size: 8em;
+    grid-column: 1 / span 3;
+  }
 }
