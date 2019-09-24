@@ -24,11 +24,11 @@ namespace AzureBrainStormingGetNewBrainstormingRoom
 
         [FunctionName("DeleteMessageFromList")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "delete",Route = "rooms/{id}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "delete",Route = "rooms/{msgId}")] HttpRequest req,
             string msgId,
             ILogger log)
         {
-            var guid = new Guid(msgId);
+            //var guid = new Guid(msgId);
 
             var message = _context.Messages.Where(m => m.Id.ToString() == msgId).SingleOrDefault();
             if(null == message)

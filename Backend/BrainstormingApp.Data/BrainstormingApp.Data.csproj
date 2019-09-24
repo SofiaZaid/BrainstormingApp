@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20190820145221_Add datetime to message table..Designer.cs" />
     <Compile Remove="Migrations\20190820150926_Add datetime to message table..cs" />
     <Compile Remove="Migrations\20190820150926_Add datetime to message table..Designer.cs" />
+    <Compile Remove="Migrations\20190924101142_Added new default value null in data context class for message property messagearchived..cs" />
+    <Compile Remove="Migrations\20190924101142_Added new default value null in data context class for message property messagearchived..Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

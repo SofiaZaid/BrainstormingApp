@@ -12,6 +12,6 @@ namespace BrainstormingApp.Domain
 
         public DateTime MessageCreated { get; set; }
 
-        public DateTime MessageArchived { get; set; }
+        public DateTime? MessageArchived { get; set; }
     }
 }

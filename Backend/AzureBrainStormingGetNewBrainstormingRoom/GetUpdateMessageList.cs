@@ -37,12 +37,20 @@ namespace AzureBrainStormingGetNewBrainstormingRoom
                 return new NotFoundObjectResult("Room id not found.");
             }
 
-            var messages = await _context.Rooms
+            var t = DateTime.Parse(startTime);
+            var addedMessages = await _context.Rooms
                 .Where(r => r.Id.Equals(guid))
-                .SelectMany(r => r.Messages.Where(msg => msg.MessageCreated >= DateTime.Parse(startTime)))
+                .SelectMany(r => r.Messages.Where(msg => msg.MessageCreated >= t
+                                                      && !msg.MessageArchived.HasValue))
                 .ToListAsync();
 
-            return new OkObjectResult(messages);
+            var archivedMessages = await _context.Rooms
+                .Where(m => m.Id.Equals(guid))
+                .SelectMany(m => m.Messages.Where(msg => msg.MessageArchived >= t))
+                .ToListAsync();
+            var messageResult = new UpdateMessageListResult { AddedMessages = addedMessages, ArchivedMessages = archivedMessages };
+
+            return new OkObjectResult(messageResult);
         }
     }
 }

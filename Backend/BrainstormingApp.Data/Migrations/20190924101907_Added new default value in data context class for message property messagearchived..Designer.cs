@@ -4,14 +4,16 @@ using BrainstormingApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BrainstormingApp.Data.Migrations
 {
     [DbContext(typeof(BrainstormingAppContext))]
-    partial class BrainstormingAppContextModelSnapshot : ModelSnapshot
+    [Migration("20190924101907_Added new default value in data context class for message property messagearchived.")]
+    partial class Addednewdefaultvalueindatacontextclassformessagepropertymessagearchived
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
