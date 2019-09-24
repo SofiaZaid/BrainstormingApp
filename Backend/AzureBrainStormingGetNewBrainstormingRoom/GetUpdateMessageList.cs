@@ -47,6 +47,7 @@ namespace AzureBrainStormingGetNewBrainstormingRoom
             var archivedMessages = await _context.Rooms
                 .Where(m => m.Id.Equals(guid))
                 .SelectMany(m => m.Messages.Where(msg => msg.MessageArchived >= t))
+                .Select(m => m.Id)
                 .ToListAsync();
             var messageResult = new UpdateMessageListResult { AddedMessages = addedMessages, ArchivedMessages = archivedMessages };
 
