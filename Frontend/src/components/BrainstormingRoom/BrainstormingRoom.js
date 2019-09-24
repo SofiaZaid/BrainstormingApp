@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./BrainstormingRoom.css";
-import { updateMessageListMilliSeconds as milliSeconds } from "../../Settings/Constants";
+import {
+  updateMessageListMilliSeconds as milliSeconds,
+  apiBaseURL
+} from "../../Settings/Constants";
 
 class BrainstormingRoom extends Component {
   constructor(props) {
@@ -8,15 +11,15 @@ class BrainstormingRoom extends Component {
     this.state = { items: [], messageIds: [] };
 
     this.keyPress = this.keyPress.bind(this);
+    this.onlyNewMessages = this.onlyNewMessages.bind(this);
   }
 
   componentDidMount() {
-    this.getUpdateList(new Date("1900-01-01 00:00:00"));
+    this.getNewMessagesToUpdateList(new Date("1900-01-01 00:00:00"));
   }
 
   keyPress(e) {
     if (e.keyCode === 13) {
-      console.log("value", e.target.value);
       this.addListItem(this.refs.writeIdeaArea.value);
     }
   }
@@ -28,7 +31,6 @@ class BrainstormingRoom extends Component {
         <ul id="addedIdeasList">
           {this.state.items.map(item => (
             <li id="brainstormingItem" key={item.id}>
-              {" "}
               {item.messageText} {this.addRemoveButton(item.id)}
             </li>
           ))}
@@ -50,24 +52,39 @@ class BrainstormingRoom extends Component {
     );
   }
 
-  isMyMessage(messageId) {
+  messageWasSentByMe(messageId) {
     return this.state.messageIds.includes(messageId);
   }
 
-  renderRemoveButton() {
-    return <button id="removeItemButton">Remove</button>;
+  renderRemoveButton(messageId) {
+    return (
+      <button
+        onClick={() => this.removeListItem(messageId)}
+        id="removeItemButton"
+      >
+        Remove
+      </button>
+    );
   }
 
   addRemoveButton(messageId) {
-    if (this.isMyMessage(messageId)) {
-      return this.renderRemoveButton();
+    if (this.messageWasSentByMe(messageId)) {
+      return this.renderRemoveButton(messageId);
     }
   }
+
+  removeListItem = itemId => {
+    const items = this.state.items.filter(item => item.id !== itemId);
+    this.setState({ items: items });
+    fetch(apiBaseURL + "/api/rooms/" + itemId, {
+      method: "DELETE"
+    });
+  };
 
   addListItem() {
     let ideaArea = document.getElementById("writeIdeaArea");
     let idea = ideaArea.value;
-    fetch("http://localhost:7071/api/rooms/" + this.props.roomid, {
+    fetch(apiBaseURL + "/api/rooms/" + this.props.roomid, {
       method: "POST",
       body: JSON.stringify({
         MessageText: idea,
@@ -75,26 +92,35 @@ class BrainstormingRoom extends Component {
       })
     })
       .then(messageId => messageId.json())
-      .then(messageId =>
-        this.setState({ messageIds: this.state.messageIds.concat(messageId) })
-      );
-    alert(this.state.messageIds);
+      .then(messageId => {
+        this.setState({ messageIds: this.state.messageIds.concat(messageId) });
+      });
     ideaArea.focus();
     ideaArea.value = "";
   }
 
-  getUpdateList(timeOfLastUpdate) {
+  onlyNewMessages(incomingMessages) {
+    const oldIds = this.state.items.map(m => m.id);
+    return incomingMessages.filter(m => !oldIds.includes(m.id));
+  }
+
+  getNewMessagesToUpdateList(timeOfLastUpdate) {
     let date = this.formatTime(timeOfLastUpdate);
     let thisUpdate = new Date();
-    fetch(
-      "http://localhost:7071/api/newmessages/" + this.props.roomid + "/" + date
-    )
+    fetch(apiBaseURL + "/api/newmessages/" + this.props.roomid + "/" + date)
       .then(messages => messages.json())
-      .then(messages =>
-        this.setState({ items: this.state.items.concat(messages) })
-      )
+      .then(messages => {
+        this.setState({
+          items: this.state.items
+            .concat(this.onlyNewMessages(messages.addedMessages))
+            .filter(m => !messages.archivedMessages.includes(m.id))
+        });
+      })
       .then(() =>
-        window.setTimeout(() => this.getUpdateList(thisUpdate), milliSeconds)
+        window.setTimeout(
+          () => this.getNewMessagesToUpdateList(thisUpdate),
+          milliSeconds
+        )
       );
   }
 

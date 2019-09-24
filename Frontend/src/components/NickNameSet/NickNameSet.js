@@ -39,7 +39,7 @@ class NickNameSet extends Component {
       return (
         <div id="nickNamePromptWrapper">
           <span id="nickNameHeader">
-            Hello, loooks like you are new to this brainstorming room, please
+            Hello, looks like you are new to this brainstorming room, please
             enter a nickname and click Add.
           </span>
           <input
