@@ -46,10 +46,20 @@
 #removeItemButton {
   justify-items: end;
   background-color: #f6b352;
+  background: none !important;
   border: 0em;
-  text-decoration: underline;
   font-size: medium;
   font-weight: bold;
+  cursor: -moz-grab;
+  color: #383a3f;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+}
+
+#removeItemButton:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 #writeIdeaArea {
