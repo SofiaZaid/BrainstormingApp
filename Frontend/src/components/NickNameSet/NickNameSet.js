@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../Button/Button.css";
 import BrainstormingRoomPage from "../BrainstormingRoom/BrainstormingRoom.js";
 import "./NickNameSet.css";
 

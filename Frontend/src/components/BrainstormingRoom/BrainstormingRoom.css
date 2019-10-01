@@ -45,6 +45,11 @@
 
 #removeItemButton {
   justify-items: end;
+  background-color: #f6b352;
+  border: 0em;
+  text-decoration: underline;
+  font-size: medium;
+  font-weight: bold;
 }
 
 #writeIdeaArea {
