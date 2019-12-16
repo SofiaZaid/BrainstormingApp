@@ -80,6 +80,18 @@
   resize: none;
 }
 
+#errorMessageNoTextGiven {
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 1;
+  font-size: 1.4em;
+  text-decoration: underline;
+  padding-left: 1em;
+  margin-left: 0.4em;
+  font-style: italic;
+  background-color: firebrick;
+  color: white;
+}
+
 @media (min-width: 740px) {
   #wrap {
     grid-template-rows: 2fr 3fr 1fr;

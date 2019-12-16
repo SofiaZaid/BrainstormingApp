@@ -9,7 +9,7 @@ import {
 class BrainstormingRoom extends Component {
   constructor(props) {
     super(props);
-    this.state = { items: [], messageIds: [] };
+    this.state = { items: [], messageIds: [], inputIdeaText: "", error: false };
 
     this.keyPress = this.keyPress.bind(this);
     this.onlyNewMessages = this.onlyNewMessages.bind(this);
@@ -28,7 +28,7 @@ class BrainstormingRoom extends Component {
   render() {
     return (
       <div id="wrap">
-        <span id="headlineRoom">Your room</span>
+        <span id="headlineRoom">Let your ideas flow</span>
         <ul id="addedIdeasList">
           {this.state.items.map(item => (
             <li id="brainstormingItem" key={item.id}>
@@ -47,8 +47,15 @@ class BrainstormingRoom extends Component {
           id="addMessageButton"
           onClick={this.addListItem.bind(this)}
         >
-          Add note
+          Add
         </button>
+        {this.state.error ? (
+          <label id="errorMessageNoTextGiven">
+            Error: please write something before you press "Add"!
+          </label>
+        ) : (
+          <label></label>
+        )}
       </div>
     );
   }
@@ -85,19 +92,26 @@ class BrainstormingRoom extends Component {
   addListItem() {
     let ideaArea = document.getElementById("writeIdeaArea");
     let idea = ideaArea.value;
-    fetch(apiBaseURL + "/api/rooms/" + this.props.roomid, {
-      method: "POST",
-      body: JSON.stringify({
-        MessageText: idea,
-        UserNick: this.props.nickname
+    if (idea != 0) {
+      fetch(apiBaseURL + "/api/rooms/" + this.props.roomid, {
+        method: "POST",
+        body: JSON.stringify({
+          MessageText: idea,
+          UserNick: this.props.nickname
+        })
       })
-    })
-      .then(messageId => messageId.json())
-      .then(messageId => {
-        this.setState({ messageIds: this.state.messageIds.concat(messageId) });
-      });
-    ideaArea.focus();
-    ideaArea.value = "";
+        .then(messageId => messageId.json())
+        .then(messageId => {
+          this.setState({
+            messageIds: this.state.messageIds.concat(messageId)
+          });
+        });
+      ideaArea.focus();
+      ideaArea.value = "";
+      this.setState({ error: false });
+    } else {
+      this.setState({ error: true });
+    }
   }
 
   onlyNewMessages(incomingMessages) {
